@@ -7,7 +7,6 @@ WORKDIR /var/www/html
 RUN unzip foste.zip
 RUN rm -rf foste.zip &&\
     cp -rf foste/* . &&\
-    rm -rf foste &&\
-    mkdir /var/www/html/secure 
+    rm -rf foste  
 EXPOSE 80
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
