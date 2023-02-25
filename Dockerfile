@@ -6,7 +6,7 @@ ADD https://www.free-css.com/assets/files/free-css-templates/download/page288/di
 WORKDIR /var/www/html
 RUN unzip digitalex.zip
 RUN rm -rf digitalex.zip &&\
-    cp -rf digitalex/* . &&\
-    rm -rf digitalex
+    cp -rf digitalex-html &&\
+    rm -rf digitalex-html
 EXPOSE 80
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
