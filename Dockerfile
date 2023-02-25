@@ -6,7 +6,7 @@ ADD https://www.free-css.com/assets/files/free-css-templates/download/page288/fo
 WORKDIR /var/www/html
 RUN unzip foste.zip
 RUN rm -rf foste.zip &&\
-    cp -rf foste/* . &&\
-    rm -rf foste  
+      cp -rf foste/* . &&\
+      rm -rf foste  
 EXPOSE 80
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
